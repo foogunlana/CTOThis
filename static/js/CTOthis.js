@@ -52,7 +52,7 @@ $(document).ready(function(){
         return false;
     });
     
-    $('.showOnPage2').click(function(){
+    $('#scrollUp').click(function(){
         $('html, body').animate({scrollTop : 0},800);
         return false;
     });
