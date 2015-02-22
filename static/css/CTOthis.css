@@ -1,0 +1,170 @@
+/** Search in alphabetical order **/
+
+*{
+	font-family: "Raleway";
+	font-weight: lighter;
+}
+
+
+body{
+	background-image: url("/static/images/random5.jpg");
+	background-clip: border-box;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    max-width:100%;
+}
+
+.circle-button{
+	height:100px;
+	width:100px;
+	border-radius:50px;
+	border:solid 1px transparent;
+	background:rgba(255,255,255,0.9);
+	outline:none;
+}
+
+.circle-button:hover{
+	border:solid 2px black;
+	background:transparent;
+}
+
+
+.circle-button:focus{
+	border:solid 1px white;
+	background:transparent;
+}
+
+
+div.cto-navbar{
+	background-color: white;
+	height: 55px;
+
+	position: fixed;  
+    width: 100%;  
+    left: 0;  
+    top: 0;  
+    right:0;
+    z-index: 100;  
+    border-top: 0;  
+	
+}
+
+div.cto-navbar ul.right{
+	float: right;
+	padding-right:50px;
+	height:100%;
+}
+
+div.cto-navbar ul.left{
+	float: left;
+	padding-left:10px;
+	height:100%;
+	background-color: rgba(0,0,0,0.8);
+}
+
+div.cto-navbar ul.left:hover{
+	background-color: rgba(0,0,0,1);
+}
+
+div.cto-navbar ul.left li{
+
+	display: inline-block;
+	padding-left:10px;
+	padding-right: 10px;
+	text-align: center;
+	height:100%;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+div.cto-navbar ul.right li{
+
+	display: inline-block;
+	padding-left:10px;
+	padding-right: 10px;
+	text-align: center;
+	height:100%;
+	font-size: 17px;
+	font-weight: bold;
+}
+
+div.cto-navbar ul.left li a{
+	display: block;
+	height: 100%;
+	color: white;
+	font-weight: bold;
+	padding-right: 10px;
+}
+
+div.cto-navbar ul.right li a{
+	display: block;
+	height: 100%;
+	color: black;
+}
+
+
+div.cto-navbar ul.right li a:hover,div.cto-navbar ul.right li a:focus, div.cto-navbar ul.left li a:focus, div.cto-navbar ul.left li a:hover{
+	text-decoration: none;
+}
+
+div.cto-navbar ul.right li:hover{
+	background-color: #e1e1e1;
+	cursor: auto;
+}
+
+div.main-title{
+	font-size:200px;
+	color:white;
+	font-weight:lighter;
+	text-align:center;
+}
+
+.fill {
+width:100%;
+margin-left: auto;
+margin-right: auto;
+max-width: initial;
+}
+
+
+
+.page_body{
+	width:100%;
+	background: rgba(50,50,50,0.6) fixed;
+	display: flex;
+	align-items: center;
+}
+
+.second_page_body{
+	min-height:1000px;
+	width:100%;
+	position: absolute;
+	background: rgba(250,250,250,0.9);
+}
+
+h1{
+	color:white;
+	font-family:'Avenir';
+	font-weight:lighter;
+}
+
+h2{
+	color:white;
+	font-family:'Avenir';
+	font-weight:lighter;	
+}
+
+
+
+@media screen and (max-width:640px) and (min-width: 300px){
+	div.cto-navbar ul.left{
+		width: 100%;
+		text-align: center;
+	}
+	div.cto-navbar ul.right{
+		width: 100%;
+		text-align: center;
+	}
+}
+
+
