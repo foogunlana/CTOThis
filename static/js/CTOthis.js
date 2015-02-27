@@ -2,7 +2,7 @@
 // jQuery functions for centering elements on html
 $.fn.verticalCenter = function () {
     this.css("position","absolute");
-    this.css("top", Math.max(0,($(window).height() - $(this).outerHeight()) / 2) + "px");
+    this.css("top", Math.max(44,($(window).height() - $(this).outerHeight()) / 2) + "px");
 };
 
 $.fn.horizontalCenter = function () {
@@ -15,16 +15,30 @@ $.fn.center = function () {
     this.verticalCenter();
 };
 
-
 $(document).ready(function(){
 
 // first centre the CTO This title and the button underneath
+    var main_title_top = $('.main-title').position().top;
+    var main_title_height = $('.main-title').outerHeight();
+    var main_title_bottom = main_title_top + main_title_height + 20;
+
     $('.main-title').center();
-    $('.circle-button').css('top',$('.main-title').position().top + ($('.main-title').outerHeight()) + 'px');
     $('.circle-button').horizontalCenter();
 
 // Resize page1 div and start page2 div according to the end of the button
-    var endOfPage1 = $('.circle-button').position().top + ($('.circle-button').outerHeight() + 50);
+    var navHeight = $('.cto-navbar').outerHeight();
+
+    var circle_height = $('.circle-button').outerHeight();
+    var endOfPage1 = Math.max(main_title_bottom + (circle_height + 50),$(window).height());
+    var circle_top = endOfPage1 - circle_height;
+
+    // Put circle at the bottom if the page is big enough
+    if(circle_top > main_title_bottom){
+        $('.circle-button').css('top',circle_top);
+    } else {
+        $('.circle-button').css('top', main_title_bottom + 'px');
+    }
+
     $('#page1').outerHeight(endOfPage1);
     $('#page2').css('top',(endOfPage1 + 'px'));
 
@@ -39,16 +53,18 @@ $(document).ready(function(){
     var pageBottom = $('#page2').position().top;
 
     $(window).scroll(function(){
-        if ($(this).scrollTop() >= pageBottom -50) {
+        var top = $(this).scrollTop();
+        if (top >= pageBottom - (2*navHeight)) {
             $('.showOnPage2').fadeIn();
         } else {
             $('.showOnPage2').fadeOut();
         }
+
     });
     
 // Click the title on page 2 to scroll to the top of page 1, click the button on page 1 to scroll to the top of page 2
     $('.scrollDown').click(function(){
-        $('html, body').animate({scrollTop : pageBottom},800);
+        $('html, body').animate({scrollTop : pageBottom - navHeight},800);
         return false;
     });
     
@@ -62,7 +78,6 @@ $(document).ready(function(){
         $('.main-title').horizontalCenter();
         $('.circle-button').horizontalCenter();
     });
-
 
 // scroll background slow motion animation
     $('body').each(function(){
