@@ -1,7 +1,7 @@
 /** Search in alphabetical order **/
 
 *{
-	font-family: "Raleway";
+	font-family: "Myriad Pro";
 	font-weight: lighter;
 }
 
@@ -54,7 +54,7 @@ div.cto-navbar{
 
 div.cto-navbar ul.right{
 	float: right;
-	padding-right:50px;
+	padding-right:20px;
 	height:100%;
 }
 
@@ -83,24 +83,24 @@ div.cto-navbar ul.left li{
 div.cto-navbar ul.right li{
 
 	display: inline-block;
-	padding-left:10px;
-	padding-right: 25px;
+	padding-left:0px;
+	padding-right: 0px;
 	text-align: center;
 	height:100%;
 	font-size: 17px;
-	font-weight: bold;
 }
 
 div.cto-navbar ul.left li a{
 	display: block;
 	height: 100%;
 	color: white;
-	font-weight: bold;
 	padding-right: 10px;
 }
 
 div.cto-navbar ul.right li a{
 	display: block;
+	padding-left:15px;
+	padding-right: 15px;
 	height: 100%;
 	color: white;
 }
@@ -111,14 +111,20 @@ div.cto-navbar ul.right li a:hover,div.cto-navbar ul.right li a:focus, div.cto-n
 }
 
 div.cto-navbar ul.right li:hover{
-	background-color: #e1e1e1;
+	background-color: black;
 	cursor: auto;
+	color: blue;
+}
+
+
+div.cto-navbar ul.right li a:hover{
+	background-color: rgba(250,250,250,0.1);
+	color: #e1e1e1;
 }
 
 div.main-title{
 	width: 400px;
 	height: 430px;
-
 	background-color: rgba(250,250,250,1);
 }
 
@@ -130,12 +136,10 @@ max-width: initial;
 }
 
 #inner-left-container{
-
 	padding:50px;
 }
 
 #inner-right-container{
-
 	padding:50px;
 }
 
@@ -184,25 +188,21 @@ input#subscribe:hover{
 }
 
 .menu-icon_container{
-	display: inline-block;
-	width:30px;
+	width:60px;
+	padding-left: 20px;
 	height: 100%;
-	top:0px;
 	float: right;
 	padding-top: 20px;
 }
 
 .second_page_body{
 	width:100%;
-	/*padding:100px;*/
-	/*position: absolute;*/
-	background: rgba(250,250,250,0.7);
+	background: rgba(250,250,250,0.8);
 }
 
 .third_page_body{
 	width:100%;
 	padding:50px;
-	/*position: absolute;*/
 	background: rgba(250,250,250,0.9);
 }
 

@@ -15,6 +15,13 @@ $.fn.center = function () {
     this.verticalCenter();
 };
 
+$.fn.beneath = function ($element) {
+
+    // This function simply places an element beneath another
+    element_ends = $element.position().top + $element.outerHeight();
+    this.css('top', element_ends + 'px');
+};
+
 $(document).ready(function(){
 
 // first centre the CTO This title and the button underneath
@@ -40,7 +47,7 @@ $(document).ready(function(){
     }
 
     $('#page1').outerHeight(endOfPage1);
-    $('#page2').css('top',(endOfPage1 + 'px'));
+    $('#page2').beneath($('#page1'));
 
 // if on a mobile screen, add this class "show on page 2" which will remove them from the 1st page
     if($(window).width() < 640){
