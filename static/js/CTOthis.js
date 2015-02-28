@@ -16,7 +16,6 @@ $.fn.center = function () {
 };
 
 $.fn.beneath = function ($element) {
-
     // This function simply places an element beneath another
     element_ends = $element.position().top + $element.outerHeight();
     this.css('top', element_ends + 'px');
@@ -50,35 +49,18 @@ $(document).ready(function(){
     $('#page2').beneath($('#page1'));
 
 // if on a mobile screen, add this class "show on page 2" which will remove them from the 1st page
+    var top_right_bar = $('#top-bar-right');
+    var dropdown = $('#mobile-dropdown-menu');
+    dropdown.hide();
+    top_right_bar.hide();
+
     if($(window).width() < 640){
-        $('#top-bar-right').addClass('showOnPage2');
+        top_right_bar.removeClass('cto-present-menu');
+        dropdown.addClass('cto-present-menu');
+    }else{
+        dropdown.removeClass('cto-present-menu');
+        top_right_bar.addClass('cto-present-menu');
     }
-
-    $('.showOnPage2').hide();
-
-// Scroll button animation
-    var pageBottom = $('#page2').position().top;
-
-    $(window).scroll(function(){
-        var top = $(this).scrollTop();
-        if (top >= pageBottom - (2*navHeight)) {
-            $('.showOnPage2').fadeIn();
-        } else {
-            $('.showOnPage2').fadeOut();
-        }
-
-    });
-    
-// Click the title on page 2 to scroll to the top of page 1, click the button on page 1 to scroll to the top of page 2
-    $('.scrollDown').click(function(){
-        $('html, body').animate({scrollTop : pageBottom - navHeight},800);
-        return false;
-    });
-    
-    $('#scrollUp').click(function(){
-        $('html, body').animate({scrollTop : 0},800);
-        return false;
-    });
 
 // On resizing the page, re-center the main title and the circle button continuously
     $(window).resize(function(){
@@ -86,17 +68,7 @@ $(document).ready(function(){
         $('.circle-button').horizontalCenter();
     });
 
-// scroll background slow motion animation
-    $('body').each(function(){
-        var $bgobj = $(this); // assigning the object
-        var xPos = $(this).css('backgroundPosition').split(' ')[0];
-        $(window).scroll(function() {
-            var yPos = -($(window).scrollTop() / 10*$bgobj.data('speed'));
-            // Put together our final background position
-            var coords = xPos + ' ' + yPos + 'px';
-            // Move the background
-            $bgobj.css({ backgroundPosition: coords });
-        });
-    });
+
+// scroll for container div
 
 });

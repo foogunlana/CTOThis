@@ -15,7 +15,12 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
   <script src="/static/js/CTOthis.js"></script>
+  <script src="/static/js/background-scroll.js"></script>
+  <script src="/static/js/scroll-animations.js"></script>
+  <script src="/static/js/cto-dropdown.js"></script>
+
 </head>
 <body data-speed="2">
   <div class="fill cto-navbar" >
@@ -24,21 +29,32 @@
         <a href="#" >CTO This</a>
       </li>
     </ul>
-    <div>
-      <ul class="right" id="top-bar-right" >
-      <li>
-        <a href="#"><br>Subscribe</a>
-      </li>
-      <li>
-        <a href="#"><br>Contact</a>
-      </li>
-      <li>
-        <a href="#"><br>About</a>
-      </li>
-      <li class="menu-icon_container">
-        <img src="/static/images/menu-icon_white.png" style="width:50%;" alt="">
-      </li>
+    <div id="menu-icon-container">
+      <img src="/static/images/menu-icon-white2.png" id="menu-icon-img" style="width:100%;" alt="">
     </div>
+    <ul class="right" id="top-bar-right" >
+      <li>
+        <a href="#">Subscribe</a>
+      </li>
+      <li>
+        <a href="#">Contact</a>
+      </li>
+      <li>
+        <a href="#">About</a>
+      </li>
+    </ul>
+  </div>
+  <div id="mobile-dropdown-menu" class="fill cto-dropdown-menu">
+    <ul >
+      <li>
+        <a href="#">Subscribe</a>
+      </li>
+      <li>
+        <a href="#">Contact</a>
+      </li>
+      <li>
+        <a href="#">About</a>
+      </li>
     </ul>
   </div>
 
@@ -60,6 +76,7 @@
         <div class="row">
           <div class="col-xs-14 col-sm-14 col-md-7 col-md-push-5" id="inner-right-container">
             <div id="right-content">
+
               <p>
                 You're a developer. Unfortunately, people know this and constantly hassle you to build their app. Just today you were approached to do the hard work in creating "instagram, but without the filters" or "AirBnB for bees (AirBnBfB)". 
               </p>
