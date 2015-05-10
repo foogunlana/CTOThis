@@ -21,7 +21,15 @@ $.fn.beneath = function ($element) {
     this.css('top', element_ends + 'px');
 };
 
+
+
 $(document).ready(function(){
+
+    var body = $('body');
+    body.hide();
+    body.css({visibility:'visible'});
+    body.delay(100).fadeIn(2500);
+    body.css({background:'url("/static/images/random5.jpg")'});
 
 // first centre the CTO This title and the button underneath
     var main_title_top = $('.main-title').position().top;
@@ -38,7 +46,7 @@ $(document).ready(function(){
     var endOfPage1 = Math.max(main_title_bottom + (circle_height + 50),$(window).height());
     var circle_top = endOfPage1 - circle_height;
 
-    // Put circle at the bottom if the page is big enough
+// Put circle at the bottom if the page is big enough
     if(circle_top > main_title_bottom){
         $('.circle-button').css('top',circle_top);
     } else {

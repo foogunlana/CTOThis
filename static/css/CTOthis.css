@@ -7,11 +7,11 @@
 
 
 body{
-	background-image: url("/static/images/random5.jpg");
 	background-clip: border-box;
 	background-repeat: no-repeat;
     background-attachment: fixed;
     max-width:100%;
+    visibility: hidden;
 }
 
 .circle-button{
@@ -34,6 +34,25 @@ body{
 
 }
 
+
+.dev_banner{
+	background-color: black;
+	color: white;
+	height: 100px;
+	width: 100%;
+	text-align: center;
+	line-height: 100px;
+	font-size: 40px;
+}
+
+.developers{
+	color: #339900;
+}
+
+
+.ventures{
+	color: #00fff3;
+}
 
 div.cto-navbar{
 	/*background-color: rgba(255,255,255,0.97);*/
@@ -79,8 +98,8 @@ div.cto-navbar ul.left li{
 	padding-right: 10px;
 	text-align: center;
 	height:100%;
+	line-height: 60px;
 	font-size: 40px;
-	padding-top: 5px;
 }
 
 div.cto-navbar ul.right li{
@@ -171,12 +190,12 @@ margin-right: auto;
 max-width: initial;
 }
 
-#inner-left-container{
+.inner-left-container{
 	padding:50px;
 	padding-top: 54px;
 }
 
-#inner-right-container{
+.inner-right-container{
 	padding:50px;
 	padding-top: 54px;
 }
@@ -199,22 +218,29 @@ input#subscribe:hover{
 	border: solid black 2px;
 }
 
-#left-content{
+.left-content{
 	padding: 40px;
+	padding-top: 15px;
 	background: rgba(250,250,250,0.99);
 }
 
-#left-content h1{
+.left-content2{
+	padding: 40px;
+	padding-top: 15px;
+	background: rgba(250,250,250,0.99);
+}
+
+.left-content h1{
 	color: black;
 }
 
 
-#right-content{
+.right-content{
 	padding: 40px;
 	background: rgba(250,250,250,0.99);
 }
 
-#right-content p{
+.right-content p{
 	font-size: 25px;
 }
 
@@ -239,13 +265,28 @@ input#subscribe:hover{
 
 .second_page_body{
 	width:100%;
-	background: rgba(250,250,250,0.8);
+	padding-left: 50px;
+	padding-right: 50px;
+	background: rgba(255,255,255,0.93);
 }
 
 .third_page_body{
 	width:100%;
-	padding:50px;
-	background: rgba(250,250,250,0.9);
+	padding-left: 50px;
+	padding-right: 50px;
+	background: black;
+}
+
+.cto_footer{
+	height:400px;
+	width:100%;
+	background-color: rgba(250,250,250,0.9);
+}
+
+.cto-container{
+	padding:5px;
+	padding-left: 250px;
+	padding-right: 250px;
 }
 
 h1{
@@ -258,6 +299,18 @@ h2{
 	color:white;
 	font-family:'Avenir';
 	font-weight:lighter;	
+}
+
+input[type=submit]{
+	color: white;
+	background-color: black;
+	margin:0px;
+}
+
+input[type=submit]:hover{
+	color: black;
+	background-color: transparent;
+	margin:0px;
 }
 
 .cto-stick{
@@ -275,15 +328,23 @@ h2{
 		text-align: center;
 	}
 
+	.cto-container{
+		padding:0px;
+	}
+
 	.second_page_body{
 		display: block;
 	}
 
-	#inner-left-container{
+	.third_page_body{
+		display: block;
+	}
+
+	.inner-left-container{
 		padding:0px;
 	}
 
-	#inner-right-container{
+	.inner-right-container{
 		padding:0px;
 	}
 	div.cto-navbar ul.right li{
@@ -293,6 +354,11 @@ h2{
 
 @media screen and (max-width:960px){
 	.second_page_body{
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+
+	.third_page_body{
 		padding-right: 0px;
 		padding-left: 0px;
 	}

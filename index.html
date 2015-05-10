@@ -3,6 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <!-- <html class="no-js"> --> <!--<![endif]-->
+<html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,12 +16,10 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
   <script src="/static/js/CTOthis.js"></script>
   <script src="/static/js/background-scroll.js"></script>
   <script src="/static/js/scroll-animations.js"></script>
   <script src="/static/js/cto-dropdown.js"></script>
-
 </head>
 <body data-speed="2">
   <div class="fill cto-navbar" >
@@ -44,7 +43,7 @@
       </li>
     </ul>
   </div>
-  <div id="mobile-dropdown-menu" class="fill cto-dropdown-menu">
+  <div id="mobile-dropdown-menu" class="fill cto-dropdown-menu" >
     <ul >
       <li>
         <a href="#">Subscribe</a>
@@ -57,63 +56,129 @@
       </li>
     </ul>
   </div>
-
-  <div class="page_body" id="page1">
+  <div class="page_body page1" id="page1">
     <div class="main-title">
-      <!-- CTO 
+      <!-- CTO
       <hr>
       <p style="font-size:100px;tex-align:center;font-weight:bold;color:white;">This</p> -->
       <img src="/static/images/CTOLogo2.png" style="width:100%;" alt="">
     </div>
-
     <button class="circle-button scrollDown">
     <img src="/static/images/downIcon3.png" style="width:100%;"alt="">
     </button>
     
   </div>
-  <div class="second_page_body" id="page2">
-    <div class="container ">
-        <div class="row">
-          <div class="col-xs-14 col-sm-14 col-md-7 col-md-push-5" id="inner-right-container">
-            <div id="right-content">
-
-              <p>
-                You're a developer. Unfortunately, people know this and constantly hassle you to build their app. Just today you were approached to do the hard work in creating "instagram, but without the filters" or "AirBnB for bees (AirBnBfB)". 
-              </p>
-              <br><br><br>
-              <br>
-              <br>
-              <p>
-                Imperial's AppSoc, DoCSoc, and Software Soc have joined forces with Imperial Create Lab to create a filter. We will collect and filter these programming requests into a collated, monthly list of commercially viable, interesting projects with either clear and fair reimbursement for development work, or else a position as CTO. 
-              </p>
-              <br><br><br>
-              <br>
-              <br>
-              <p>
-                Sign up here to get a monthly list of sensible opportunities, which have been filtered by Create Lab.
-              </p>
+  <div class="second_page_body page2 " id="page2">
+    <div class="cto-container ">
+      <div class="row">
+        <div class="col-xs-14 col-sm-14 col-md-7 col-md-push-5 inner-right-container">
+          <div class="dev_banner developers">
+                Developers
             </div>
-          </div>
-          <div class="col-xs-14 col-sm-14 col-md-5 col-md-pull-7" id="inner-left-container">
-            <div id="left-content">
-              <div style="">
-                <h1>
-                  Subscribe here
-                </h1>
-                <p>
-                  <h4>
-                    Your email address
-                  </h4>
-                  <input type="text" id="subscribe" class="text">
-                </p>
-              </div>
-              <br>
-              <img src="/static/images/CTOLogo2.png" style="width:100%;max-width:400px;" alt="">
-              <br>
-            </div>
+          <div class="right-content">
+            <p>
+              You're a developer. Unfortunately, people know this and constantly hassle you to build their app. Just today you were approached to do the hard work in creating "instagram, but without the filters" or "AirBnB for bees (AirBnBfB)".
+            </p>
+            <br><br><br>
+            <p>
+              Imperial's AppSoc, DoCSoc, and Software Soc have joined forces with Imperial Create Lab to create a filter. We will collect and filter these programming requests into a collated, monthly list of commercially viable, interesting projects with either clear and fair reimbursement for development work, or else a position as CTO.
+            </p>
+            <br><br><br>
+            <p>
+              Sign up here to get a monthly list of sensible opportunities, which have been filtered by Create Lab.
+            </p>
           </div>
         </div>
+        <div class="col-xs-14 col-sm-14 col-md-5 col-md-pull-7 inner-left-container">
+          <div class="left-content">
+            <div style="">
+                <!-- <input type="text" id="subscribe" class="text"> -->
+                <!-- Begin MailChimp Signup Form -->
+                <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
+                <h1>
+                Subscribe here
+                </h1>
+                <div id="mc_embed_signup">
+                  <form action="//imperialcreatelab.us10.list-manage.com/subscribe/post?u=de63a36d975c4e4aa119a0c5e&amp;id=e6f9282663" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" style="padding:0px;" novalidate>
+                    <div id="mc_embed_signup_scroll">
+                      <div class="mc-field-group" style="margin:0px;width:100%;">
+                          <label for="mce-EMAIL">
+                            <h4>
+                            Your email address
+                            </h4> 
+                          </label>
+                        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" style="border:none;">
+                      </div>
+                      <div id="mce-responses" class="clear">
+                        <div class="response" id="mce-error-response" style="display:none"></div>
+                        <div class="response" id="mce-success-response" style="display:none"></div>
+                      </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                      <input type="text" name="b_de63a36d975c4e4aa119a0c5e_e6f9282663" tabindex="-1" value="" hidden>
+                    </div>
+                    <input type="submit" value="Subscribe" id="mc-embedded-subscribe" style="margin:auto;width:100%;height:35px;border-radius:2px;border:none;font-size:15px;">
+                  </form>
+                </div>
+                <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+                <!--End mc_embed_signup-->
+            </div>
+            <br>
+            <img src="/static/images/CTOLogo2.png" style="width:100%;max-width:400px;" alt="">
+          <br>
+          </div>
+          <div class="left-content2">
+            Looking for developers?
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <div class="third_page_body page3" id="page3">
+    <div class="cto-container ">
+      <div class="row">
+        <div class="col-xs-14 col-sm-14 col-md-7 col-md-push-5 inner-right-container">
+          <div class="dev_banner ventures scrollToMe" id="ventures">
+                Ventures
+            </div>
+          <div class="right-content">
+            <p>
+              You're a developer. Unfortunately, people know this and constantly hassle you to build their app. Just today you were approached to do the hard work in creating "instagram, but without the filters" or "AirBnB for bees (AirBnBfB)".
+            </p>
+            <br><br><br>
+            <p>
+              Imperial's AppSoc, DoCSoc, and Software Soc have joined forces with Imperial Create Lab to create a filter. We will collect and filter these programming requests into a collated, monthly list of commercially viable, interesting projects with either clear and fair reimbursement for development work, or else a position as CTO.
+            </p>
+            <br><br><br>
+            <p>
+              Sign up here to get a monthly list of sensible opportunities, which have been filtered by Create Lab.
+            </p>
+          </div>
+        </div>
+        <div class="col-xs-14 col-sm-14 col-md-5 col-md-pull-7 inner-left-container">
+          <div class="left-content">
+            <div style="">
+                <!-- <input type="text" id="subscribe" class="text"> -->
+                <!-- Begin MailChimp Signup Form -->
+                <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
+                <h1>
+                Subscribe here
+                </h1>
+                
+                <!--End mc_embed_signup-->
+            </div>
+            <br>
+          </div>
+          <img src="/static/images/CTOLogo2.png" style="width:100%;max-width:400px;" alt="">
+          <br>
+          <div class="left-content2">
+            Looking for developers?
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cto_footer">
+    
+  </div>
   </div>
 </body>
 </html>

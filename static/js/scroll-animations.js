@@ -21,6 +21,13 @@ $(document).ready(function(){
         $('html, body').animate({scrollTop : endOfPage1 - navHeight},800);
         return false;
     });
+
+    $('#ventures').click(function(){
+        var topOfButton = $('#ventures').position().top;
+        console.log(topOfButton);
+        $('html, body').animate({scrollTop : $('#page2').outerHeight() + endOfPage1 - navHeight},800);
+        return false;
+    });
     
     $('#scrollUp').click(function(){
         $('html, body').animate({scrollTop : 0},800);
