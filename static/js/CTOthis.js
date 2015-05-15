@@ -29,7 +29,12 @@ $(document).ready(function(){
     body.hide();
     body.css({visibility:'visible'});
     body.delay(100).fadeIn(2500);
-    body.css({background:'url("/static/images/random5.jpg")'});
+    body.css({'background':'url("http://s6.postimg.org/hhrnmf5j5/random5.jpg")',
+              'background-clip': 'border-box',
+              'background-attachment': 'fixed',
+              'background-size':'100% 100%',
+              'max-width':'100%'
+          });
 
 // first centre the CTO This title and the button underneath
     var main_title_top = $('.main-title').position().top;
@@ -74,6 +79,16 @@ $(document).ready(function(){
     $(window).resize(function(){
         $('.main-title').horizontalCenter();
         $('.circle-button').horizontalCenter();
+
+        if($(window).width() < 640){
+            top_right_bar.removeClass('cto-present-menu');
+            dropdown.addClass('cto-present-menu');
+            top_right_bar.hide();
+        }else{
+            dropdown.removeClass('cto-present-menu');
+            top_right_bar.addClass('cto-present-menu');
+            dropdown.hide();
+        }
     });
 
 

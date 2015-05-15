@@ -2,7 +2,7 @@
 
 $(document).ready(function(){
     var navHeight = $('.cto-navbar').outerHeight();
-    var endOfPage1= $('#page1').outerHeight();
+    var endOfPage1 = $('#page1').outerHeight();
     $('.showOnPage2').hide();
 
     // Scroll button animation
@@ -23,14 +23,28 @@ $(document).ready(function(){
     });
 
     $('#ventures').click(function(){
-        var topOfButton = $('#ventures').position().top;
-        console.log(topOfButton);
-        $('html, body').animate({scrollTop : $('#page2').outerHeight() + endOfPage1 - navHeight},800);
+        $('html, body').animate({scrollTop : $('#page2').outerHeight() + endOfPage1 - navHeight},1000);
+        return false;
+    });
+
+    $('.scrollVentures').click(function(){
+        $('#ventures').click();
+        $('#mobile-dropdown-menu').hide();
+    });
+
+    $('.scrollDevelopers').click(function(){
+        $('.scrollDown').click();
+        $('#mobile-dropdown-menu').hide();
+    });
+
+    $('.scrollFooter').click(function(){
+        $('html, body').animate({scrollTop : $('#page2').outerHeight() + $('#page3').outerHeight() +endOfPage1 - navHeight},1500);
+        $('#mobile-dropdown-menu').hide();
         return false;
     });
     
     $('#scrollUp').click(function(){
-        $('html, body').animate({scrollTop : 0},800);
+        $('html, body').animate({scrollTop : 0},1000);
         return false;
     });
 });
